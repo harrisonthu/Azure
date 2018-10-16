@@ -1,0 +1,28 @@
+/****** Object:  UserDefinedFunction [dbo].[Azure_GetDate]    Script Date: 10/16/2018 1:40:10 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:      <Author, , Han Thu>
+-- Create Date: <Create Date,10/15/2018 , >
+-- Description: <Description, When you print GetDate(), or SYSDate(), 
+--                it will return the time zone that is 4 hour ahead of Eastern Time Zone(EST).
+--                This function will print out the time zone (EST) when you run it on Azure platform >
+-- =============================================
+CREATE FUNCTION [dbo].[Azure_GetDate] 
+(
+ -- return date time type
+        @result datetime
+)
+RETURNS datetime
+AS
+BEGIN
+
+    RETURN (SELECT DATEADD(hh,-4,GETDATE()))
+END
+GO
+
+
