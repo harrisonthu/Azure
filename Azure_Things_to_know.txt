@@ -1,3 +1,7 @@
 Things to know:
 
 - Azure Blob is the storage for places that IS NOT Temporary but it is availble on cloud(so multiple VM can acess to what's inside of the Blob). 
+
+- Load Balancers - thing that will assing whether the task/project is too big that it needs to be run simultaneously or statically based on the available virtual machines that we have created.
+	- In order to create Load Balancer: you need 2 things (Backend pool,FrontEnd IP pool). First, create Backend pool so that frontend will  be automatically created afterwards.
+
