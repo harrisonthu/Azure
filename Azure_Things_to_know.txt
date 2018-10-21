@@ -1,0 +1,3 @@
+Things to know:
+
+- Azure Blob is the storage for places that IS NOT Temporary but it is availble on cloud(so multiple VM can acess to what's inside of the Blob). 
