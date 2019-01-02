@@ -14,7 +14,7 @@ GO
 -- =============================================
 CREATE FUNCTION [dbo].[Azure_GetDate] 
 (
- -- return date time type
+ -- return date time type 
         @result datetime
 )
 RETURNS datetime
